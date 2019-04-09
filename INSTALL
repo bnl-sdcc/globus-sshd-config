@@ -1,0 +1,26 @@
+Following instructions for "SSH With Globus Auth Server Installation":
+
+http://docs-prebuild.globuscs.info.s3-website-us-east-1.amazonaws.com/bde5b0808df1ef0b2456e0f33073d7ee6024f8e0/ssh/server/
+
+-- yum install globus-ssh python-requests
+-- create app at globus
+-- add text entry to DNS
+-- setup config files
+-- register endpoint in globus
+
+cp -vr /etc/ssh /etc/globus-ssh
+
+/etc/globus-ssh/sshd_config:
+
+UsePAM  yes
+ChallengeResponseAuthentication yes
+
+
+File locations:
+
+etc/globus-sshd.pamd   -> /etc/pam.d/globus.sshd
+etc/globus-sshd.service -> /usr/lib/systemd/system/globus-sshd.service
+etc/globus-sshd.sysconfig -> /etc/sysconfig/globus-sshd
+
+-- start service. 
+
