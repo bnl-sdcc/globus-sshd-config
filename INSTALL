@@ -15,12 +15,14 @@ cp -vr /etc/ssh /etc/globus-ssh
 UsePAM  yes
 ChallengeResponseAuthentication yes
 
-
 File locations:
 
 etc/globus-sshd.pamd   -> /etc/pam.d/globus.sshd
 etc/globus-sshd.service -> /usr/lib/systemd/system/globus-sshd.service
 etc/globus-sshd.sysconfig -> /etc/sysconfig/globus-sshd
+
+COPY /usr/sbin/sshd -> /usr/sbin/globus-sshd
+
 
 -- start service. 
 
