@@ -1,7 +1,7 @@
 #%PAM-1.0
 auth        required      pam_sepermit.so
 auth        required      pam_env.so
-auth        [success=done maxtries=die new_authtok_reqd=done default=ignore]    pam_globus.so
+auth        [success=done maxtries=die new_authtok_reqd=done default=ignore]    pam_oauth_ssh.so
 auth        requisite     pam_succeed_if.so uid >= 1000 quiet_success
 auth        required      pam_deny.so
 
