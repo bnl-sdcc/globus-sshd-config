@@ -67,6 +67,7 @@ rm /usr/sbin/globus-sshd
 #/usr/bin/projectbin.sh
 
 %defattr(-,root,root,-)
+/etc/globus-ssh/sshd_config
 /etc/pam.d/globus-sshd
 /etc/sysconfig/globus-sshd
 /usr/lib/systemd/system/globus-sshd.service
