@@ -40,7 +40,7 @@ mkdir -p %{buildroot}/etc/pam.d
 mkdir -p %{buildroot}/etc/sysconfig
 mkdir -p %{buildroot}/usr/lib/systemd/system
 
-cp etc/sshd_config %{buildroot}/etc/globus-ssh
+cp etc/sshd_config %{buildroot}/etc/globus-ssh/sshd_config
 cp etc/globus-sshd.pamd %{buildroot}/etc/pam.d/globus-sshd
 cp etc/globus-sshd.sysconfig %{buildroot}/etc/sysconfig/globus-sshd
 cp etc/globus-sshd.service %{buildroot}/usr/lib/systemd/system/
